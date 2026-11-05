@@ -1,0 +1,31 @@
+<div class="container">
+
+  <header>
+    <h1>Product Showcase</h1>
+    <p>Explore our latest technology products</p>
+  </header>
+
+  <section class="product-list">
+
+    <div class="product-card" *ngFor="let product of products">
+
+      <h2>{{ product.name }}</h2>
+
+      <p><strong>Product ID:</strong> {{ product.id }}</p>
+
+      <p class="price">₹{{ product.price }}</p>
+
+      <p>
+        <strong>Availability:</strong>
+
+        <span [class.available]="product.inStock"
+              [class.unavailable]="!product.inStock">
+          {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+        </span>
+      </p>
+
+    </div>
+
+  </section>
+
+</div>
