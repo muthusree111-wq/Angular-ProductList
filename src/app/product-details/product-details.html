@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Product Details</h1>
+
+  <p>Fetch product information from ASP.NET Core Web API.</p>
+
+  <button (click)="getProduct()" [disabled]="loading">
+    {{ loading ? 'Loading...' : 'Get Product' }}
+  </button>
+
+  @if (product) {
+    <div class="product-card">
+      <h2>{{ product.name }}</h2>
+      <p><strong>Product ID:</strong> {{ product.id }}</p>
+      <p><strong>Price:</strong> ₹{{ product.price }}</p>
+      <p class="success">Product fetched successfully!</p>
+    </div>
+  }
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+</div>

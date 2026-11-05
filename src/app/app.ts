@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
-import { ProductListComponent } from './product-list/product-list.component';
-import { QuoteGeneratorComponent } from './quote-generator/quote-generator';
+import { ProductDetailsComponent } from './product-details/product-details';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    ProductListComponent,
-    QuoteGeneratorComponent
-  ],
+  imports: [ProductDetailsComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+}
